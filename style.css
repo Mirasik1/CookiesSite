@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #F2AE72;
+    --secondary-color: #400F04;
+    
+    --accent-color: #F2AE72;
+    --back:#F2CDAC ;
+    --footer-background-color: #0D0D0D /* Новая переменная для серого цвета футера */
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Обновленный шрифт */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    flex: 1 0 auto;
+    background-color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Добавление тени для глубины */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #400F04; /* Обновленный цвет для контраста с фоном */
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета */
+}
+nav a:hover {
+    color: var(--secondary-color); /* Изменение цвета при наведении */
+}
+aside {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 120px 20px 20px; /* Увеличенный отступ сверху */
+    background-color: var(--back); /* Белый фон для контента */
+    border-radius: 15px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Добавление тени */
+    padding: 20px;
+}
+
+.cookie-button {
+    border: none;
+    cursor: pointer;
+    width: 600px; 
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("cookie.png") no-repeat center;
+    background-size: 50%;
+   
+    transition: transform 0.3s ease-in-out, background-size 0.3s ease-in-out;
+     /* Добавляем плавность изменения размера */
+}
+
+.cookie-button:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    background-color: transparent; /* Убедитесь, что фон остается прозрачным */
+    background-size: 60%; /* Увеличиваем изображение при наведении */
+}
+
+
+footer {
+    flex-shrink: 0;
+    background-color: var(--footer-background-color);
+    padding: 20px 0;
+    text-align: center;
+    color: white; 
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white; /* Цвет ссылок */
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+}
+footer i {
+    font-size: 20px; 
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-5px, -5px);
+    }
+    20% {
+        transform: translate(5px, 5px);
+    }
+    30% {
+        transform: translate(-5px, 5px);
+    }
+    40%, 60% {
+        transform: translate(5px, -5px);
+    }
+    50% {
+        transform: translate(-5px, -5px);
+    }
+    70% {
+        transform: translate(5px, 5px);
+    }
+    80% {
+        transform: translate(-5px, 5px);
+    }
+    90% {
+        transform: translate(5px, -5px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}

@@ -1,4 +1,4 @@
-let count = 0; // Счётчик нажатий
+let count = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     const cookieButton = document.getElementById('cookieButton');
@@ -8,21 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
         count++;
         clickCountDisplay.textContent = `Нажатий: ${count}`;
 
-        // Добавление "дрожания" при каждом клике
         shakeButton(cookieButton);
 
         if (count >= 90 && count < 100) {
-            // Меняем местоположение на случайное начиная с 90-го клика
+            
             randomPosition(cookieButton);
         }
 
         if (count >= 100) {
-            // Показываем конфетти при 100 и более нажатиях
+           
             showConfetti();
             setTimeout(() => {
                 alert('Поздравляем! 100 и более нажатий!');
-                window.location.href = 'nextpage.html'; // Замените 'nextpage.html' на ваш URL
-            }, 1500); 
+                window.location.href = 'buy.php';
+            }, 3000); 
         }
     });
 });
@@ -31,7 +30,7 @@ function shakeButton(button) {
     button.classList.add('shake');
     setTimeout(() => {
         button.classList.remove('shake');
-    }, 500); // Длительность анимации "тряски" соответствует вашему CSS
+    }, 500); 
 }
 
 function randomPosition(button) {
@@ -63,3 +62,11 @@ function showConfetti() {
         }
     }());
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const resetFormButton = document.getElementById('resetFormButton');
+    const form = document.querySelector('.order-form');
+
+    resetFormButton.addEventListener('click', function () {
+        form.reset(); 
+    });
+});

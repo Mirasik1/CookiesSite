@@ -4,7 +4,7 @@
     
     --accent-color: #F2AE72;
     --back:#F2CDAC ;
-    --footer-background-color: #0D0D0D /* Новая переменная для серого цвета футера */
+    --footer-background-color: #0D0D0D 
 }
 
 * {
@@ -15,7 +15,7 @@ html, body {
     flex-direction: column;
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Обновленный шрифт */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 body {
@@ -32,7 +32,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Добавление тени для глубины */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
 }
 
@@ -45,11 +45,11 @@ nav {
 nav a {
     text-decoration: none;
     margin-left: 20px;
-    color: #400F04; /* Обновленный цвет для контраста с фоном */
-    transition: color 0.3s ease-in-out; /* Плавное изменение цвета */
+    color: #400F04;
+    transition: color 0.3s ease-in-out; 
 }
 nav a:hover {
-    color: var(--secondary-color); /* Изменение цвета при наведении */
+    color: var(--secondary-color);
 }
 aside {
     padding: 10px 20px;
@@ -63,11 +63,78 @@ aside {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin: 120px 20px 20px; /* Увеличенный отступ сверху */
-    background-color: var(--back); /* Белый фон для контента */
-    border-radius: 15px; /* Скругление углов */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Добавление тени */
+    margin: 120px 20px 20px; 
+    background-color: var(--back);
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     padding: 20px;
+}
+.main-content_2 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 120px 20px 20px; 
+    background-color: #400F04;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    padding: 20px;
+}
+.order-form {
+    background-color: var(--back);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 500px;
+}
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="button"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-color);
+}
+button[type="button"]:hover {
+    background-color: var(--accent-color);
 }
 
 .cookie-button {
@@ -82,13 +149,13 @@ aside {
     background-size: 50%;
    
     transition: transform 0.3s ease-in-out, background-size 0.3s ease-in-out;
-     /* Добавляем плавность изменения размера */
+   
 }
 
 .cookie-button:hover {
-    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
-    background-color: transparent; /* Убедитесь, что фон остается прозрачным */
-    background-size: 60%; /* Увеличиваем изображение при наведении */
+    transform: scale(1.1);
+    background-color: transparent;
+    background-size: 60%;
 }
 
 
@@ -103,7 +170,7 @@ footer {
 footer a {
     display: inline-block;
     margin: 0 10px;
-    color: white; /* Цвет ссылок */
+    color: white;
     text-decoration: none;
     transition: transform 0.2s ease-in-out;
 }
@@ -150,3 +217,107 @@ footer i {
     backface-visibility: hidden;
     perspective: 1000px;
 }
+.contact-block {
+    text-align: center;
+    background-color: var(--back);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-photo {
+    max-width: 150px; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}
+
+.contact-block, .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.recipe-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px; 
+}
+
+.ingredients,
+.instructions {
+    width: 45%; 
+    padding: 20px;
+    background-color: var(--back);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    margin-top: 20px;
+}
+
+h3 {
+    color: var(--primary-color); 
+    margin-bottom: 15px;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0; 
+}
+
+li::before {
+    content: "• ";
+    color: var(--accent-color);
+    font-weight: bold; 
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 10px; 
+}
+
+@media (max-width: 768px) {
+    .ingredients,
+    .instructions {
+        width: 100%; 
+    }
+}
+.actions button {
+    margin-right: 10px;
+}
+
